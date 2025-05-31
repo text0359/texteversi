@@ -7,7 +7,7 @@
     // LISTA COM TODAS AS SUAS IMAGENS DE PÉTALAS DISPONÍVEIS
     const todasAsImagensDePetalas = [
       'img/petala1C.png',  
-      'img/petala1.png',
+      'https://github.com/text0359/texteversi/blob/main/petala1.png',
         'img/petala1A.png',
         'img/petala1B.png'
         // Se você tiver variações como 'petala1.1.png', 'petala2.1.png', adicione-as aqui também.

@@ -1,0 +1,167 @@
+/* style.css */
+body {
+    margin: 0;
+    overflow: hidden;
+    font-family: 'Lato', sans-serif;
+    background: linear-gradient(135deg, #ffdde1 0%, #ee9ca7 100%);
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza os blocos (caixas) horizontalmente */
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center; /* Centraliza o texto DENTRO dos blocos, se não for sobrescrito */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.titulo-principal h1 {
+    font-family: 'Playfair Display', serif;
+    color: #fff;
+    font-size: clamp(2em, 6vw, 2.8em);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+/* style.css */
+/* ... (todos os seus estilos anteriores permanecem) ... */
+
+#areaDoVersiculo {
+    background-color: rgba(255, 250, 250, 0.8); /* Um branco levemente diferente, quase neve, com transparência */
+    padding: 20px 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(100, 80, 80, 0.08); /* Sombra bem sutil */
+    margin-top: -15px; /* Para sobrepor um pouco a sombra da caixa de mensagem, se desejar, ou ajuste para margin-bottom: 30px */
+    margin-bottom: 30px;
+    display: inline-block; /* Para se ajustar ao conteúdo */
+    max-width: min(85vw, 600px); /* Similar à caixa de mensagem */
+    min-width: 260px;
+    border-top: 3px solid #ffb3c1; /* Uma borda superior temática rosa claro */
+    box-sizing: border-box;
+    text-align: center; /* Centraliza o texto do versículo e referência */
+}
+
+/* style.css */
+/* style.css */
+/* ... (seus outros estilos permanecem) ... */
+
+#textoVersiculo {
+    font-family: 'Libre Baskerville', serif; /* <<< Aplicando Libre Baskerville */
+    font-size: clamp(0.95em, 2.5vw, 1.15em);  /* Tamanho ajustado para boa leitura */
+    color: #3d3d3d; /* Um cinza escuro profundo, clássico */
+    line-height: 1.7; /* Bom espaçamento entre linhas para serifadas */
+    margin-bottom: 10px;
+    font-style: normal; /* Sem itálico para o texto principal do versículo */
+    font-weight: 400;   /* Peso regular (Libre Baskerville Regular) */
+}
+
+#referenciaVersiculo {
+    font-family: 'Libre Baskerville', serif; /* <<< Mesma fonte para consistência */
+    font-size: clamp(0.8em, 2.1vw, 0.9em); /* Tamanho menor para a referência */
+    color: #606060; /* Cinza médio para a referência */
+    font-weight: 700;   /* Peso negrito (Libre Baskerville Bold) para destacar a referência */
+    font-style: normal;
+    text-transform: uppercase; /* Opcional: Deixar a referência em maiúsculas para um estilo clássico */
+    letter-spacing: 0.5px;   /* Opcional: Leve espaçamento entre letras na referência */
+}
+
+/* Ajuste para o espaçamento entre o título e a primeira caixa, se necessário */
+.titulo-principal {
+    margin-bottom: 20px; /* Reduzido um pouco pois a caixa de versículo adiciona altura */
+}
+#areaDaMensagem {
+    background-color: #fffafb; /* Branco com leve tom rosado */
+    padding: 20px 30px; /* Padding interno: 20px topo/baixo, 30px laterais */
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(100, 50, 50, 0.12);
+    margin-bottom: 30px; /* Espaço abaixo da caixa da mensagem */
+
+    /* --- Chave para responsividade ao conteúdo --- */
+    display: inline-block; /* Faz a caixa se ajustar à largura do seu conteúdo */
+    max-width: min(90vw, 650px); /* No máximo 90% da largura da tela, ou 650px (o que for menor) */
+    min-width: 270px;          /* Uma largura mínima para não ficar muito estreito com pouco conteúdo */
+    /* O texto dentro será centralizado por padrão devido ao text-align: center no body */
+    /* Se quiser texto à esquerda na mensagem: text-align: left; */
+    box-sizing: border-box;
+}
+
+/* style.css */
+/* ... (outros estilos permanecem os mesmos) ... */
+
+#mensagemDoDia {
+    font-family: 'Caveat', cursive;
+    font-size: clamp(1.5em, 4vw, 2em);
+    color: #b33951;
+    line-height: 1.45;
+    font-weight: 400; /* Ou 700 se preferir mais peso */
+    margin: 0;
+}
+.controles {
+    position: relative;
+    z-index: 100;
+    background-color: #fffdfd;
+    padding: 15px; /* Padding um pouco menor e uniforme */
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(100, 50, 50, 0.1);
+    display: inline-block; /* Já estava correto, faz a caixa se ajustar aos botões */
+    /* Será centralizado pelo align-items: center do body */
+}
+
+.controles button {
+    padding: 10px 20px; /* Padding dos botões ligeiramente reduzido */
+    margin: 8px; /* Margem ao redor de cada botão */
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(145deg, #ff758c, #ff97aa);
+    color: white;
+    font-weight: 700;
+    font-size: clamp(0.8em, 2.2vw, 0.9em);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    transition: all 0.25s ease-out;
+    box-shadow: 0 3px 6px rgba(255, 82, 108, 0.25);
+}
+
+.controles button:hover, .controles button:focus {
+    background: linear-gradient(145deg, #ff5c77, #ff859b);
+    transform: translateY(-3px) scale(1.03);
+    box-shadow: 0 5px 10px rgba(255, 50, 80, 0.3);
+    outline: none;
+}
+
+/* As seções #areaDasPetalas, .petala-animada e @keyframes animacaoCair
+   permanecem como na última versão que você gostou da animação */
+
+#areaDasPetalas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: -1; 
+}
+
+.petala-animada {
+    position: absolute;
+    width: 45px; 
+    height: auto;
+    top: -70px;
+    animation-timing-function: ease-in-out; 
+    animation-fill-mode: forwards;
+    opacity: 0.9; 
+    filter: drop-shadow(2px 2px 3px rgba(0,0,0,0.2)); 
+}
+
+@keyframes animacaoCair {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(110vh) rotate(720deg); /* Cai até abaixo da tela e gira */
+        opacity: 0; /* Some no final */
+    }
+}
